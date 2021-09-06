@@ -1,15 +1,14 @@
-import "./App.css";
+import React from "react";
 import {Home} from './Home'
 import {About} from './About'
 import {Profile} from './Profile'
-import React from "react";
 
 const PAGES = {
   home: <Home/>,
   about: <About/>,
   profile: <Profile/>
 }
-class App extends React.Component() {
+class App extends React.Component {
   state = { currentPage: "home" };
 
   navigateTo = (page) => {
