@@ -27,6 +27,11 @@ class App extends React.Component() {
             </ul>
           </nav>
         </header>
+        <main>
+          <section>
+            {PAGES[this.state.currentPage]}
+          </section>
+        </main>
       </>
     );
   }
