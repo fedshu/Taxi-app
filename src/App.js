@@ -1,4 +1,7 @@
 import "./App.css";
+import {Home} from './Home'
+import {About} from './About'
+import {Profile} from './Profile'
 import React from "react";
 
 const PAGES = {
