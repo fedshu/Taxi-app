@@ -1,6 +1,11 @@
 import "./App.css";
 import React from "react";
 
+const PAGES = {
+  home: <Home/>,
+  about: <About/>,
+  profile: <Profile/>
+}
 class App extends React.Component() {
   state = { currentPage: "home" };
 
