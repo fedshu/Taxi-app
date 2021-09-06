@@ -1,13 +1,12 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
 
 class App extends React.Component() {
-
-  state = { currentPage: 'home' };
+  state = { currentPage: "home" };
 
   navigateTo = (page) => {
-    this.setState({ currentPage: page })
-  }
+    this.setState({ currentPage: page });
+  };
 
   render() {
     return (
@@ -16,21 +15,15 @@ class App extends React.Component() {
           <nav>
             <ul>
               <li>
-                <button onClick={() => this.navigateTo('home')}>
-                  Home
-                </button>
-                <button onClick={() => this.navigateTo('about')}>
-                  About
-                </button>
-                <button onClick={() => this.navigateTo('profile')}>
-                  Profile
-                </button>
+                <button onClick={() => this.navigateTo("home")}>Home</button>
+                <button onClick={() => this.navigateTo("about")}>About</button>
+                <button onClick={() => this.navigateTo("profile")}>Profile</button>
               </li>
             </ul>
           </nav>
         </header>
       </>
-    )
+    );
   }
 }
 
