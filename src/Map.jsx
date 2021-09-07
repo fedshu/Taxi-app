@@ -16,6 +16,10 @@ export class Map extends Component {
     })
   }
 
+  componentWillUnmount() {
+      this.map.remove()
+  }
+
   render() {
     return (
       <div className="map-wrapper">
