@@ -14,7 +14,7 @@ class App extends React.Component {
   state = { currentPage: "home" };
 
   navigateTo = (page) => {
-    this.setState({ currentPage: page });
+    this.setState({ currentPage: this.props.isLoggedIn ? page : 'home' });
   };
 
   render() {
