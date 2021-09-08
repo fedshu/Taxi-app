@@ -1,10 +1,12 @@
 import React from "react";
 import {Home} from './Home'
+import {Map} from './Map'
 import {Profile} from './Profile'
 import "./App.css";
 
 const PAGES = {
   home: <Home/>,
+  map: <Map/>,
   profile: <Profile/>
 }
 class App extends React.Component {
