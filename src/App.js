@@ -2,6 +2,7 @@ import React from "react";
 import {Home} from './Home'
 import {Map} from './Map'
 import {Profile} from './Profile'
+import { withAuth } from './AuthContext';
 import "./App.css";
 
 const PAGES = {
@@ -40,4 +41,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withAuth(App);
