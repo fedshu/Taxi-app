@@ -25,6 +25,7 @@ class App extends React.Component {
               <li>
                 <button onClick={() => this.navigateTo("home")}>Home</button>
                 <button onClick={() => this.navigateTo("profile")}>Profile</button>
+                <button onClick={() => this.navigateTo("map")}>Map</button>
               </li>
             </ul>
           </nav>
