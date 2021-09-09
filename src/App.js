@@ -33,7 +33,7 @@ class App extends React.Component {
         </header>
         <main>
           <section>
-            {PAGES[this.state.currentPage]}
+            {PAGES[this.state.currentPage]({ navigate: this.navigateTo })}
           </section>
         </main>
       </>
