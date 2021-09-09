@@ -2,7 +2,10 @@ import React from "react";
 import { withAuth } from "./AuthContext";
 
 export class Profile extends React.Component {
-  unauthenticate = () => this.props.logOut();
+  unauthenticate = () => {
+      this.props.logOut()
+      this.props.navigate('home')
+    };
 
   render() {
     return (
