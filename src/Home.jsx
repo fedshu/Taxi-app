@@ -1,4 +1,5 @@
 import React from 'react'
+import { withAuth } from './AuthContext';
 
 export const Home = () => {
     return (
@@ -10,3 +11,5 @@ export const Home = () => {
         </form>
     )
 }
+
+export const HomeWithAuth = withAuth(Home)
