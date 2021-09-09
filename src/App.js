@@ -1,14 +1,14 @@
 import React from "react";
-import {Home} from './Home'
+import {HomeWithAuth} from './Home'
 import {Map} from './Map'
-import {Profile} from './Profile'
+import {ProfileWithAuth} from './Profile'
 import { withAuth } from './AuthContext';
 import "./App.css";
 
 const PAGES = {
-  home: <Home/>,
-  map: <Map/>,
-  profile: <Profile/>
+  home: (props) => <HomeWithAuth {...props}/>,
+  map: (props) => <Map {...props}/>,
+  profile: (props) => <ProfileWithAuth {...props}/>
 }
 class App extends React.Component {
   state = { currentPage: "home" };
