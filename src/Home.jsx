@@ -8,6 +8,10 @@ export class Home extends React.Component {
     this.props.logIn(email.value, password.value);
   };
 
+  goToProfile = () => {
+      this.props.navigate('profile')
+  }
+
   render() {
     return (
       <>
