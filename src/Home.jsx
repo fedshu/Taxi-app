@@ -17,7 +17,7 @@ export class Home extends React.Component {
       <>
         {this.props.isLoggedIn ? (
           <p>
-            You are logged in <button onClick={() => {}}>go to profile</button>
+            You are logged in <button onClick={this.goToProfile}>go to profile</button>
           </p>
         ) : (
           <form onSubmit={this.authenticate}>
