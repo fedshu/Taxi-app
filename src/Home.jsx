@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { authenticate } from "./actions";
 export class Home extends React.Component {
   authenticate = (event) => {
@@ -8,16 +9,12 @@ export class Home extends React.Component {
     this.props.authenticate(email.value, password.value);
   };
 
-  goToProfile = () => {
-      this.props.navigate('profile')
-  }
-
   render() {
     return (
       <>
         {this.props.isLoggedIn ? (
           <p>
-            You are logged in <button onClick={this.goToProfile}>go to profile</button>
+            You are logged in <Link to="/profile">Go to profile</Link>
           </p>
         ) : (
           <form onSubmit={this.authenticate}>
