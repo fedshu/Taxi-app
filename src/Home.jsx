@@ -1,6 +1,6 @@
 import React from "react";
-import { withAuth } from "./AuthContext";
-
+import { connect } from "react-redux";
+import { logIn } from "./actions";
 export class Home extends React.Component {
   authenticate = (event) => {
     event.preventDefault();
@@ -33,4 +33,7 @@ export class Home extends React.Component {
   }
 }
 
-export const HomeWithAuth = withAuth(Home);
+export const HomeWithAuth = connect(
+  (state) => ({isLoggedIn: state.auth.isLoggedIn}),
+  { logIn }
+)(Home);
