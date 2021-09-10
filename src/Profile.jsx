@@ -4,8 +4,8 @@ import { logOut } from "./actions";
 
 export class Profile extends React.Component {
   unauthenticate = () => {
-      this.props.logOut()
-    };
+    this.props.logOut();
+  };
 
   render() {
     return (
@@ -17,7 +17,4 @@ export class Profile extends React.Component {
   }
 }
 
-export const ProfileWithAuth = connect(
-  null,
-  { logOut }
-)(Profile);
+export const ProfileWithAuth = connect(null, { logOut })(Profile);
