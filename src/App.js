@@ -1,22 +1,12 @@
 import React from "react";
-import {HomeWithAuth} from './Home'
-import {Map} from './Map'
-import {ProfileWithAuth} from './Profile'
+import { HomeWithAuth } from "./Home";
+import { Map } from "./Map";
+import { ProfileWithAuth } from "./Profile";
 import { connect } from "react-redux";
 import "./App.css";
+import { Switch, Link, Route } from "react-router";
 
-const PAGES = {
-  home: (props) => <HomeWithAuth {...props}/>,
-  map: (props) => <Map {...props}/>,
-  profile: (props) => <ProfileWithAuth {...props}/>
-}
 class App extends React.Component {
-  state = { currentPage: "home" };
-
-  navigateTo = (page) => {
-    this.setState({ currentPage: this.props.isLoggedIn ? page : 'home' });
-  };
-
   render() {
     return (
       <>
@@ -24,16 +14,24 @@ class App extends React.Component {
           <nav>
             <ul>
               <li>
-                <button onClick={() => this.navigateTo("home")}>Home</button>
-                <button onClick={() => this.navigateTo("profile")}>Profile</button>
-                <button onClick={() => this.navigateTo("map")}>Map</button>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/map">Profile</Link>
+              </li>
+              <li>
+                <Link to="/profile">Map</Link>
               </li>
             </ul>
           </nav>
         </header>
         <main>
           <section>
-            {PAGES[this.state.currentPage]({ navigate: this.navigateTo })}
+            <Switch>
+              <Route exact path="/" component={HomeWithAuth} />
+              <Route exact path="/map" component={Map} />
+              <Route exact path="/profile" component={ProfileWithAuth} />
+            </Switch>
           </section>
         </main>
       </>
@@ -41,6 +39,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(
-  state => ({isLoggedIn: state.auth.isLoggedIn}),
-)(App);
+export default connect((state) => ({ isLoggedIn: state.auth.isLoggedIn }))(App);
