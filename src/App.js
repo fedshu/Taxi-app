@@ -2,7 +2,7 @@ import React from "react";
 import {HomeWithAuth} from './Home'
 import {Map} from './Map'
 import {ProfileWithAuth} from './Profile'
-import { withAuth } from './AuthContext';
+import { connect } from "react-redux";
 import "./App.css";
 
 const PAGES = {
@@ -41,4 +41,6 @@ class App extends React.Component {
   }
 }
 
-export default withAuth(App);
+export default connect(
+  state => ({isLoggedIn: state.auth.isLoggedIn}),
+)(App);
