@@ -1,5 +1,6 @@
 import React from "react";
-import { withAuth } from "./AuthContext";
+import { connect } from "react-redux";
+import { logOut } from "./actions";
 
 export class Profile extends React.Component {
   unauthenticate = () => {
@@ -17,4 +18,7 @@ export class Profile extends React.Component {
   }
 }
 
-export const ProfileWithAuth = withAuth(Profile);
+export const ProfileWithAuth = connect(
+  null,
+  { logOut }
+)(Profile);
