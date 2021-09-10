@@ -1,10 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
+import { Switch, Route,Link } from "react-router-dom";
+import { PrivateRoute } from "./PrivateRoute";
 import { HomeWithAuth } from "./Home";
 import { Map } from "./Map";
 import { ProfileWithAuth } from "./Profile";
-import { connect } from "react-redux";
 import "./App.css";
-import { Switch, Link, Route } from "react-router";
 
 class App extends React.Component {
   render() {
@@ -17,10 +18,10 @@ class App extends React.Component {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/map">Profile</Link>
+                <Link to="/map">Map</Link>
               </li>
               <li>
-                <Link to="/profile">Map</Link>
+                <Link to="/profile">Profile</Link>
               </li>
             </ul>
           </nav>
@@ -29,8 +30,8 @@ class App extends React.Component {
           <section>
             <Switch>
               <Route exact path="/" component={HomeWithAuth} />
-              <Route exact path="/map" component={Map} />
-              <Route exact path="/profile" component={ProfileWithAuth} />
+              <PrivateRoute path="/map" component={Map} />
+              <PrivateRoute path="/profile" component={ProfileWithAuth} />
             </Switch>
           </section>
         </main>
