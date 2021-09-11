@@ -9,16 +9,23 @@ export const LoginForm = () => {
 
   const onSubmit = (data) => {
     const { email, password } = data;
+    console.log("data", data);
     dispatch(authenticate(email, password));
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="email">Email:</label>
-      <input {...register('test', { required: true })} id="email" type="email" name="email" size="28" />
+      <input
+        {...register("email", { required: true })}
+        id="email"
+        type="email"
+        name="email"
+        size="28"
+      />
       <label htmlFor="password">Password:</label>
       <input
-        {...register('test', { required: true })}
+        {...register("password", { required: true })}
         id="password"
         type="password"
         name="password"
