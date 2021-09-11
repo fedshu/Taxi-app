@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { authenticate } from "./actions";
+import { authenticate } from "../actions";
 export class Home extends React.Component {
   authenticate = (event) => {
     event.preventDefault();
