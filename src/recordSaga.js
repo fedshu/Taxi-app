@@ -1,4 +1,4 @@
-import { runSaga } from "@redux-saga/core";
+import { runSaga } from "redux-saga";
 
 export const recordSaga = async (saga, initialAction = null) => {
   const dispatched = [];
