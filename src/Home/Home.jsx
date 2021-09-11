@@ -11,7 +11,7 @@ export class Home extends React.Component {
             You are logged in <Link to="/profile">Go to profile</Link>
           </p>
         ) : (
-          <LoginForm></LoginForm>
+          <LoginForm/>
         )}
       </>
     );
