@@ -15,10 +15,10 @@ export const LoginForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="email">Email:</label>
-      <input ref={register} id="email" type="email" name="email" size="28" />
+      <input {...register('test', { required: true })} id="email" type="email" name="email" size="28" />
       <label htmlFor="password">Password:</label>
       <input
-        ref={register}
+        {...register('test', { required: true })}
         id="password"
         type="password"
         name="password"
