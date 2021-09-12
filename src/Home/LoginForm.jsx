@@ -3,8 +3,8 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { authenticate } from "../actions";
 
-export const LoginForm = () => {
-  const dispatch = useDispatch();
+export const LoginForm = ({useDispatchHook = useDispatch}) => {
+  const dispatch = useDispatchHook();
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
@@ -31,7 +31,7 @@ export const LoginForm = () => {
         name="password"
         size="28"
       />
-      <button type="submit">Submit</button>
+      <button type="submit">Log in</button>
     </form>
   );
 };
