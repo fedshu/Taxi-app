@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Switch, Route, Link } from "react-router-dom";
-import { PrivateRoute, Map, ProfileWithAuth } from "./components";
-import { HomeWithAuth } from "./Home";
+import { PrivateRoute } from "./components";
+import { HomeWithAuth, Map, ProfileWithAuth } from "./pages";
 import { Paper } from "@mui/material";
 class App extends React.Component {
   render() {

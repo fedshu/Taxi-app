@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { LoginForm } from "../components";
+
 export class Home extends React.Component {
   render() {
     return (
@@ -11,7 +12,7 @@ export class Home extends React.Component {
             You are logged in <Link to="/profile">Go to profile</Link>
           </p>
         ) : (
-          <LoginForm/>
+          <LoginForm />
         )}
       </>
     );
