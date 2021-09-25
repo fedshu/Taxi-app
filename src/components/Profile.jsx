@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { logOut } from "./actions";
+import { logOut } from "../actions";
 
-export class Profile extends React.Component {
+class Profile extends React.Component {
   unauthenticate = () => {
     this.props.logOut();
   };

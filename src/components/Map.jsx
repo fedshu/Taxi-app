@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import mapboxgl from "mapbox-gl";
 
-export class Map extends Component {
+export default class Map extends Component {
   mapContainer = React.createRef();
 
   componentDidMount() {
