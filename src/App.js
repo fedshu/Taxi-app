@@ -3,12 +3,13 @@ import { connect } from "react-redux";
 import { Switch, Route, Link } from "react-router-dom";
 import { PrivateRoute } from "./components";
 import { HomeWithAuth, Map, ProfileWithAuth } from "./pages";
-import { Paper } from "@mui/material";
+import { Box } from "@mui/material";
+import './scss/app.scss'
 class App extends React.Component {
   render() {
     return (
       <>
-        <Paper variant="outlined" square>
+        <Box className="container">
           {this.props.isLoggedIn && (
             <header>
               <nav>
@@ -26,17 +27,14 @@ class App extends React.Component {
               </nav>
             </header>
           )}
-
-          <main>
-            <section>
-              <Switch>
-                <Route exact path="/" component={HomeWithAuth} />
-                <PrivateRoute path="/map" component={Map} />
-                <PrivateRoute path="/profile" component={ProfileWithAuth} />
-              </Switch>
-            </section>
-          </main>
-        </Paper>
+          <section>
+            <Switch>
+              <Route exact path="/" component={HomeWithAuth} />
+              <PrivateRoute path="/map" component={Map} />
+              <PrivateRoute path="/profile" component={ProfileWithAuth} />
+            </Switch>
+          </section>
+        </Box>
       </>
     );
   }
