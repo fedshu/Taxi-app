@@ -3,31 +3,29 @@ import { connect } from "react-redux";
 import { Switch, Route, Link } from "react-router-dom";
 import { PrivateRoute } from "./components";
 import { HomeWithAuth, Map, ProfileWithAuth } from "./pages";
-import { Box } from "@mui/material";
-import './scss/app.scss'
+import { Box, AppBar, Toolbar, Typography } from "@mui/material";
+import "./scss/app.scss";
 class App extends React.Component {
   render() {
     return (
       <>
         <Box className="container">
           {this.props.isLoggedIn && (
-            <header>
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/map">Map</Link>
-                  </li>
-                  <li>
-                    <Link to="/profile">Profile</Link>
-                  </li>
-                </ul>
-              </nav>
-            </header>
+            <AppBar position="static" color="default">
+              <Toolbar>
+                <Link to="/">
+                  <Typography>Home</Typography>
+                </Link>
+                <Link to="/map">
+                  <Typography>Map</Typography>
+                </Link>
+                <Link to="/profile">
+                  <Typography>Profile</Typography>
+                </Link>
+              </Toolbar>
+            </AppBar>
           )}
-          <section>
+          <section className="container__content">
             <Switch>
               <Route exact path="/" component={HomeWithAuth} />
               <PrivateRoute path="/map" component={Map} />
