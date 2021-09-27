@@ -14,10 +14,10 @@ export const LoginForm = ({ useDispatchHook = useDispatch }) => {
   };
 
   return (
-    <Grid container justifyContent="center" alignItems="center">
+    <Grid className="form" container justifyContent="center" alignItems="center">
       <Box>
         <Paper elevation={16}>
-          <form className="form" onSubmit={handleSubmit(onSubmit)}>
+          <form className="form__container" onSubmit={handleSubmit(onSubmit)}>
             <Typography variant="h5" gutterBottom component="div">
               Log in
             </Typography>
