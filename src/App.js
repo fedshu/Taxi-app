@@ -27,13 +27,11 @@ class App extends React.Component {
               </Box>
             </AppBar>
           )}
-          <section className="container__content">
-            <Switch>
-              <Route exact path="/" component={HomeWithAuth} />
-              <PrivateRoute path="/map" component={Map} />
-              <PrivateRoute path="/profile" component={ProfileWithAuth} />
-            </Switch>
-          </section>
+          <Switch>
+            <Route exact path="/" component={HomeWithAuth} />
+            <PrivateRoute path="/map" component={Map} />
+            <PrivateRoute path="/profile" component={ProfileWithAuth} />
+          </Switch>
         </Box>
       </>
     );
