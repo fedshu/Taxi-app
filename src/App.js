@@ -12,17 +12,19 @@ class App extends React.Component {
         <Box className="container">
           {this.props.isLoggedIn && (
             <AppBar position="static" color="default">
-              <Toolbar>
-                <Link to="/">
-                  <Typography>Home</Typography>
-                </Link>
-                <Link to="/map">
-                  <Typography>Map</Typography>
-                </Link>
-                <Link to="/profile">
-                  <Typography>Profile</Typography>
-                </Link>
-              </Toolbar>
+              <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+                <Toolbar>
+                  <Link to="/">
+                    <Typography sx={{ ml: 2 }}>Home</Typography>
+                  </Link>
+                  <Link to="/map">
+                    <Typography sx={{ ml: 2 }}>Map</Typography>
+                  </Link>
+                  <Link to="/profile">
+                    <Typography sx={{ ml: 2 }}>Profile</Typography>
+                  </Link>
+                </Toolbar>
+              </Box>
             </AppBar>
           )}
           <section className="container__content">
