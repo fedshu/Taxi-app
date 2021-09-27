@@ -10,7 +10,7 @@ export default class Map extends Component {
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v9",
+      style: "mapbox://styles/fedor993/cku2z24v505wp17qe9qjg8ysm",
       center: [30.3056504, 59.9429126],
       zoom: 10,
     });
@@ -22,7 +22,9 @@ export default class Map extends Component {
 
   render() {
     return (
-      <div data-testid="map" className="map" ref={this.mapContainer}></div>
+      <div>
+        <div data-testid="map" className="map" ref={this.mapContainer}></div>
+      </div>
     );
   }
 }
