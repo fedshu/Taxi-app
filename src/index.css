@@ -26,12 +26,6 @@
 
 /* Layout */
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #ddd;
-}
-
 hr {
   background-color: var(--color-bg-secondary);
   border: none;
@@ -132,20 +126,4 @@ textarea[readonly] {
 label {
   font-weight: bold;
   margin-bottom: 0.2rem;
-}
-
-/* Custom styles */
-
-.map-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.map {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
 }
