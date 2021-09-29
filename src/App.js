@@ -15,13 +15,13 @@ class App extends React.Component {
               <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                 <Toolbar>
                   <Link to="/">
-                    <Typography sx={{ ml: 2 }}>Home</Typography>
+                    <Typography variant="h6" sx={{ ml: 2 }}>Home</Typography>
                   </Link>
                   <Link to="/map">
-                    <Typography sx={{ ml: 2 }}>Map</Typography>
+                    <Typography variant="h6" sx={{ ml: 2 }}>Map</Typography>
                   </Link>
                   <Link to="/profile">
-                    <Typography sx={{ ml: 2 }}>Profile</Typography>
+                    <Typography variant="h6" sx={{ ml: 2 }}>Profile</Typography>
                   </Link>
                 </Toolbar>
               </Box>
