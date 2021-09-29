@@ -11,8 +11,8 @@ export default class Map extends Component {
     this.map = new mapboxgl.Map({
       container: this.mapContainer.current,
       style: "mapbox://styles/fedor993/cku2z24v505wp17qe9qjg8ysm",
-      center: [30.3056504, 59.9429126],
-      zoom: 10,
+      center: [27.5592, 53.9023],
+      zoom: 11,
     });
   }
 
