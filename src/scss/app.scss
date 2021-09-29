@@ -45,5 +45,13 @@ body {
   right: 0;
   left: 0;
   bottom: 0;
+
+  .mapboxgl-canvas-container {
+    height: 100%;
+  }
+  
+  .mapboxgl-control-container {
+    display: none;
+  }
 }
 
