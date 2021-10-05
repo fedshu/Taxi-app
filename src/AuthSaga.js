@@ -1,15 +1,17 @@
 import { takeEvery, call, put } from "redux-saga/effects";
-import { AUTHENTICATE, logIn } from "./actions";
+import { authenticate, logIn } from "./actions";
 import { serverLogin } from "./api";
 
 export function* authenticateSaga(action) {
   const { email, password } = action.payload;
-  const success = yield call(serverLogin, email, password);
-  if (success) {
+  try {
+    yield call(serverLogin, email, password);
     yield put(logIn());
+  } catch (error) {
+    console.error(error);
   }
 }
 
 export function* authSaga() {
-  yield takeEvery(AUTHENTICATE, authenticateSaga);
+  yield takeEvery(authenticate.toString(), authenticateSaga);
 }
