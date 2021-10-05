@@ -1,4 +1,4 @@
-import { LOG_IN, LOG_OUT } from "../actions";
+import { logIn, logOut } from "../actions";
 
 const initialState = {
   isLoggedIn: false,
@@ -6,10 +6,10 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
-    case LOG_IN: {
+    case logIn.toString(): {
       return { isLoggedIn: true };
     }
-    case LOG_OUT: {
+    case logOut.toString(): {
       return { isLoggedIn: false };
     }
     default: 
